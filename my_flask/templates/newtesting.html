@@ -1,0 +1,16 @@
+<form action="/newtesting" method="POST">
+    <div>
+        <label>Name</label>
+        <input name="name" id="name" type='text' placeholder="Jane Doe" required>
+    </div>
+    <div>
+        <label>Age</label>
+        <input name="age" id="age" type='number' placeholder="18+" min="18" max="64" required>
+    </div>
+    <div>
+
+        <br><br><br><br>
+        {% for rows in newtestdata %}
+           <h4> {{rows.Name}}
+        </h4>
+        {% endfor %}
