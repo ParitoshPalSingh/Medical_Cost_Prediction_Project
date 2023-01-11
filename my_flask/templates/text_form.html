@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+        <meta http-equiv="'X-UA-Compatible" content="ie=edge">
+        <title>{{ title }}</title>
+        <!-- the {{title }} is dynamic and can be removed to a static name if wanted. The dynamic name is shown in the render_template in app.py -->
+    </head>
+
+    <body>
+        <form action="/Results" method="POST">
+        <div>
+            <label>Name</label>
+            <input name="name" id="name" type='text' placeholder="Jane Doe" required>
+        </div>
+        <div>
+            <label>Age</label>
+            <input name="age" id="age" type='number' placeholder="18+" min="18" max="64" required>
+        </div>
+        <div>
+            <label for="sex">Sex:</label>
+            <select name="sex" id="sex">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+        </div>    
+        <div>
+            <label>BMI</label>
+            <input name="bmi" id="bmi" type='number' placeholder="25.7" step="0.1" min="15" max="54"  required>
+        </div>    
+        <div>
+            <label for="region">Region</label>
+            <select name="region" id="region">
+                <option value="southeast">South-East</option>
+                <option value="southwest">South-West</option>
+                <option value="northwest">North-West</option>
+                <option value="northeast">North-East</option>
+            </select>
+        </div>    
+        <div>
+            <label>Children</label>
+            <input name="children" id="children" type='number' placeholder="0-5" min="0" max="5" required>
+        </div>
+        <div>
+            <label>Smoker</label>
+            <input name="smoker" id="smoker" type='text' placeholder="Yes/No"  required>
+        </div>
+        <div>
+            <button type="reset">RESET</button>
+            <button type="submit">SUBMIT</button>
+        </div>
+        </form>
+
+
+    </body>
+</html>
