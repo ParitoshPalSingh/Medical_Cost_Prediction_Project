@@ -4,14 +4,17 @@ Created on Tue Jan 10 14:50:25 2023
 
 @author: vmadmin
 """
-
+import pandas as pd
 import flask
 from flask import Flask,render_template,request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import create_engine
 from datetime import datetime
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///friends.db'
+
+my_conn = create_engine("sqlite:///friends.db")
 
 ## Initialize the Database
 db=SQLAlchemy(app)
@@ -102,8 +105,27 @@ def Results():
             data1 = Friends(Name=name, Age=age, Sex=sex, Bmi=bmi, Region=region, Children=children,Smoker=smoker)
             
             db.session.add(data1)
-            
             db.session.commit()
+            
+            id1=[];names1=[];age1=[];sex1=[];bmi1=[];Reg1=[];child1=[];smok1=[]
+            names3 = Friends.query.order_by(Friends.ID)
+            for i in names3:
+                id1.append(i.ID)
+                names1.append(i.Name)
+                age1.append(i.Age)
+                sex1.append(i.Sex)
+                bmi1.append(i.Bmi)
+                Reg1.append(i.Region)
+                child1.append(i.Children)
+                smok1.append(i.Smoker)
+                
+            
+            df2 = pd.DataFrame({'ID':id1,'Name':names1,
+                                'Age':age1,'Sex':sex1,'BMI':bmi1,'Region':Reg1,'Children':child1,'Smoker':smok1
+                                })
+            #df2 = pd.DataFrame(names_3)
+            df2.to_csv('testing.csv')
+            
             return redirect("/Results")
         
         except Exception as e:

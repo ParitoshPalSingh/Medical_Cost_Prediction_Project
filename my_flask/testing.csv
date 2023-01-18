@@ -1,0 +1,16 @@
+,ID,Name,Age,Sex,BMI,Region,Children,Smoker
+0,9,Paritosh,29,M,29.0,northwest,0,No
+1,12,Janet,22,F,20.3,northwest,2,Yes
+2,13,Jane,19,M,24.3,southeast,2,No
+3,14,Harry,27,M,27.9,southeast,4,Yes
+4,15,Kayla,22,F,21.0,northwest,2,Yes
+5,17,Potter,21,M,19.6,northeast,5,No
+6,18,Owen,29,M,33.0,northwest,0,Yes
+7,19,Roma,32,F,23.0,southwest,4,Yes
+8,20,Tony,43,M,24.5,northwest,4,No
+9,21,Ron,45,M,31.7,southeast,5,Yes
+10,22,Jack,52,M,27.4,northwest,2,Yes
+11,23,Avery,29,M,19.5,southwest,0,Yes
+12,24,Lexie,25,F,18.1,southeast,1,No
+13,25,Pepper,42,F,22.1,northeast,2,Yes
+14,26,Salman,52,M,23.1,southeast,0,Yes

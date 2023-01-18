@@ -5,6 +5,14 @@ Created on Tue Jan 10 14:50:25 2023
 @author: vmadmin
 """
 
+try:
+    query1 = "SELECT * FROM friends;"
+    df = pd.read_sql(query1,my_conn,index_col='ID')
+    df.to_csv('dataset_test.csv')
+    
+except Exception as e2:
+    return f'{e2}'
+
 import flask
 from flask import Flask,render_template,request, redirect
 from flask_sqlalchemy import SQLAlchemy
