@@ -44,9 +44,9 @@
             <td>{{rows.Children}}</td>
             <td>{{rows.Smoker}}</td>
             <td>{{rows.Insurance}}</td>            
-            <td><a href="/delete/{{rows.ID}}"><button padding=5 class="btn btn-danger">Delete Record</button></a></td>
+            <td><a href="/delete/{{rows.ID}}"><button class="btn btn-danger">Delete Record</button></a></td>
             <td>
-            {% if rows.Insurance > 12000 %}
+            {% if rows.Insurance > 9382 %}
               <img src="{{ url_for('static',filename='g.gif')}}" height="200px" width="201px" />
             {% else %}
             <img src="{{ url_for('static',filename='l.gif')}}" height="200px" width="201px" />
