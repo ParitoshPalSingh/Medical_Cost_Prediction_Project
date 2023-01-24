@@ -1,0 +1,4 @@
+,ID,Name,Age,Sex,BMI,Region,Children,Smoker
+0,1,Test2,19,F,26.0,southwest,2,No
+1,2,Test3,23,F,26.7,southwest,2,Yes
+2,3,Kiringa,20,M,18.4,southeast,1,No
