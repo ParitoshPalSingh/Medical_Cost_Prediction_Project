@@ -50,11 +50,15 @@ inp_data=[]
 
 @app.route('/delete/<int:id>')
 def delete(id):
-    delete_rec = Users.query.get_or_404(id)
+    print('trigger1')
+    delete_rec2 = Users.query.get_or_404(id)
+    print('Delete triggered')
     
     try:
-        db2.session.delete(delete_rec)
+        db2.session.delete(delete_rec2)
         db2.session.commit()
+        print('test22222')
+        
         return redirect("/Results") 
     except Exception as e:    
         return f'{e}'
